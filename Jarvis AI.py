@@ -24,7 +24,7 @@ def wishme():
         speak('good afternoon!!')
     else:
         speak('good evening!!')
-    speak('i am binod sir please tell me how may i help you')
+    speak('i am Jarvis, sir please tell me how may i help you')
 
 def takecommand():
     #it takes input from mic
@@ -50,8 +50,8 @@ def sendEmail(to,content):
     server=smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('rahulmane20122000@gmail.com','rahulmane123')
-    server.sendmail('rahulmane2012000@gmail.com',to,content)
+    server.login('kadamswapnil636@gmail.com','rahulmane123')
+    server.sendmail('kadamswapnil636@gmail.com',to,content)
     server.close()
 
 if __name__ == '__main__':
@@ -67,7 +67,7 @@ if __name__ == '__main__':
             speak('According to wikipedia')
             speak(results)
           elif 'tell me something about your creator' in query:
-              speak('rahul mane is my creator and i am manufactured in india')
+              speak('swapnil kadam is my creator and i am manufactured in india')
 
           elif 'open youtube' in query:
               speak('sure sir')
@@ -92,19 +92,19 @@ if __name__ == '__main__':
               time=datetime.datetime.now().strftime("%H:%M:%S")
               speak(f"sir,the time is{time}")
 
-          elif 'send email to dharmendra mane' in query:
+          elif 'send email to' navanath kadam ' in query:
                  try:
                      speak('what should i say')
                      content=takecommand()
-                     to="dharmendrakumarhmane@gmail.com"
+                     to="navanathkadam01@gmail.com"
                      sendEmail(to, content)
                      speak("email has been sent")
                  except Exception as e:
-                      speak('sorry my friend rahul i am not able to send the email')
+                      speak('sorry my friend swapnil i am not able to send the email')
 
 
           elif 'what is name of your creator' in query:
-              speak('i am created by rahul an indian electronincs and telecommunication engineer')
+              speak('i am created by swapnil, an Indian, mechanical engineer')
 
           elif 'i am hungry' in query:
               speak('i have best thing for you on this hungry moment')
